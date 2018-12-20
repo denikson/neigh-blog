@@ -1,0 +1,35 @@
+{% include header.html %}
+
+<nav class="container mt-2 mb-3">
+    <div class="row">
+        <div class="col d-flex justify-content-start">
+        {% if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}">Previous: {{ page.previous.title }}</a>
+        {% endif %}
+        </div>
+        <div class="col d-flex justify-content-center"><a href="{{ site.url }}">All posts</a></div>
+        <div class="col d-flex justify-content-start">
+        {% if page.next %}
+            <a href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }}</a>
+        {% endif %}
+        </div>
+    </div>
+</nav>
+<article class="container">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <time class="font-weight-light" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: site.dateformat }}</time>
+    </header>
+    <hr/>
+    
+    {% if page.abstract %}
+        <div>
+            <h2>Abstract</h2>
+            <div>{{ page.abstract | markdownify }}</div>
+        </div>
+        <hr>
+    {% endif %}
+    {{ content }}
+</article>
+
+{% include footer.html %}
