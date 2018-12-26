@@ -21,7 +21,7 @@
         {% if page.authors %}
         <address class="d-flex mb-0">
             {% for author in page.authors%}
-                <p class="d-flex"><span>{{ author.name }}</span>{% if author.email %}<a href="mailto:test">&lt;{{ author.email }}&gt;</a>{% endif %}</p>
+                <p class="d-flex"><span>{{ author.name }}</span>{% if author.email %}<a href="mailto:{{ author.email }}">&lt;{{ author.email }}&gt;</a>{% endif %}</p>
             {% endfor %}
         </address>
         {% endif %}

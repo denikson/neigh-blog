@@ -28,9 +28,9 @@ print_hi('Tom')
 
 Some math: 
 
-\\[ \int_a^b f(x) \ dx \tag{1} \\]
+\\[ \int_a^b f(x) \ dx = \lim_{\|P\| \to 0} \sum_{i=1}^N f(z_i) (x_i - x_{i - 1}) \tag{1} \\]
 
-Also inlined: \\( f : \mathbb{R}^n \to \mathbb{R} \\)
+Also inlined: \\( f : \mathbb{R}^n \to \mathbb{R} \\), \\( f(x) = \lVert x \rVert_2 \\).
 
 ### Tables
 

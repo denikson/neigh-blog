@@ -38,31 +38,14 @@
 
     .article-post h2 {
         font-size: 17pt;
-        counter-reset: subsection_counter 0;
-    }
-
-    .article-post h2::before {
-        content: counter(section_counter) " ";
-        counter-increment: section_counter;
     }
 
     .article-post h3 {
         font-size: 14pt;
-        counter-reset: subsubsection_counter 0;
-    }
-
-    .article-post h3::before {
-        content: counter(section_counter) "."counter(subsection_counter) " ";
-        counter-increment: subsection_counter;
     }
 
     .article-post h4 {
         font-size: 12pt;
-    }
-
-    .article-post h4::before {
-        content: counter(section_counter) "."counter(subsection_counter) "."counter(subsubsection_counter) " ";
-        counter-increment: subsubsection_counter;
     }
 
     .article-post h1,
