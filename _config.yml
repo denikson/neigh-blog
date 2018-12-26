@@ -60,8 +60,10 @@ defaults:
       type: "posts"
     values:
       styles:
-        - "/assets/styles/monokai.css"
+        - "/assets/styles/monokai.min.css"
         - "/assets/styles/katex.min.css"
+        - "/assets/styles/post.min.css"
+        - "/assets/styles/print.min.css"
       scripts:
         - 
           url: "/assets/scripts/katex.min.js"

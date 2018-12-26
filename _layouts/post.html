@@ -1,6 +1,6 @@
 {% include header.html %}
 
-<nav class="container mt-2 mb-3">
+<nav class="article-nav container mt-2 mb-3">
     <div class="row">
         <div class="col d-flex justify-content-start">
         {% if page.previous %}
@@ -15,19 +15,26 @@
         </div>
     </div>
 </nav>
-<article class="container">
+<article class="container article-post" lang="en">
     <header>
         <h1>{{ page.title }}</h1>
+        {% if page.authors %}
+        <address class="d-flex mb-0">
+            {% for author in page.authors%}
+                <p class="d-flex"><span>{{ author.name }}</span>{% if author.email %}<a href="mailto:test">&lt;{{ author.email }}&gt;</a>{% endif %}</p>
+            {% endfor %}
+        </address>
+        {% endif %}
         <time class="font-weight-light" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: site.dateformat }}</time>
     </header>
-    <hr/>
+    <hr class="abstract-line"/>
     
     {% if page.abstract %}
-        <div>
+        <div class="abstract">
             <h2>Abstract</h2>
             <div>{{ page.abstract | markdownify }}</div>
         </div>
-        <hr>
+        <hr class="abstract-line"/>
     {% endif %}
     {{ content }}
 </article>
