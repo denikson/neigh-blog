@@ -7,7 +7,7 @@
             <a href="{{ page.previous.url | relative_url }}">Previous: {{ page.previous.title }}</a>
         {% endif %}
         </div>
-        <div class="col d-flex justify-content-center"><a href="{{ site.url }}">All posts</a></div>
+        <div class="col d-flex justify-content-center"><a href="{{ '/' | relative_url }}">All posts</a></div>
         <div class="col d-flex justify-content-start">
         {% if page.next %}
             <a href="{{ page.next.url | relative_url }}">Next: {{ page.next.title }}</a>
