@@ -14,6 +14,19 @@
         {% endif %}
         </div>
     </div>
+    <div class="row mt-3 pdf-form">
+        <div class="col">
+            <form action="https://url-to-pdf-api.herokuapp.com/api/render" method="get">
+                <input type="hidden" name="url" value="{{ page.url | absolute_url}}" />
+                <input type="hidden" name="emulateScreenMedia" value="false" />
+                <input type="hidden" name="scrollPage" value="true" />
+                <input type="hidden" name="pdf.displayHeaderFooter" value="true" />
+                <input type="hidden" name="pdf.footerTemplate" value="<div class='pageFooter' style='font-size:12px;text-align:center;margin:auto;'><span class='pageNumber'></span></div>" />
+                <input type="hidden" name="pdf.margin.bottom" value="1in" />
+                <input class="btn btn-primary" type="submit" value="Download as PDF" />
+            </form>
+        </div>
+    </div>
 </nav>
 <article class="container article-post" lang="en">
     <header>

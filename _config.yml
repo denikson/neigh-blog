@@ -74,6 +74,7 @@ defaults:
         - 
           url: "/assets/scripts/rendermath.js"
           defer: true
+      permalink: /:categories/:year/:month/:day/:title:output_ext
 
 # Build settings
 markdown: kramdown

@@ -3,6 +3,14 @@
         display: none;
     }
 
+    .pdf-form {
+        display: none;
+    }
+
+    .article-post .abstract h2 {
+        margin-top: 1em;
+    } 
+
     .article-post code {
         background-color: transparent;
     }
@@ -10,6 +18,10 @@
     .article-post address {
         justify-content: center;
         flex-direction: row;
+    }
+
+    .article-post ul.references li {
+        text-align: justify;
     }
 
     .article-post address>p {
@@ -23,7 +35,7 @@
         padding-right: 0;
     }
 
-    .article-post {
+    .article-post, .pageFooter {
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         font-size: 12pt;
     }

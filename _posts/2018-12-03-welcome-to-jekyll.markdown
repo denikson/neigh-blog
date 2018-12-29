@@ -29,6 +29,7 @@ print_hi('Tom')
 Some math: 
 
 \\[ \int_a^b f(x) \ dx = \lim_{\|P\| \to 0} \sum_{i=1}^N f(z_i) (x_i - x_{i - 1}) \tag{1} \\]
+\\[ \iiint_C \nabla \cdot F \ dV = \iint_{\partial C} F \cdot dS \\]
 
 Also inlined: \\( f : \mathbb{R}^n \to \mathbb{R} \\), \\( f(x) = \lVert x \rVert_2 \\).
 
