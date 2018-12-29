@@ -13,7 +13,7 @@ layout: main
   {% for post in paginator.posts %}
   <div class="card mb-2">
     <div class="card-body">
-      <h5 class="card-title"><a href="{{ post.url }}">{{ post.title }}</a></h5>
+      <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
       {% if post.authors %}
       <div class="card-subtitle text-muted">{{ post.authors | map: "name" | array_to_sentence_string}}</div>
       {% endif %}
@@ -24,7 +24,7 @@ layout: main
             {{ post.excerpt }} 
         {% endif %}
       </div>
-      <a href="{{ post.url }}" class="card-link">Full text</a>
+      <a href="{{ post.url | relative_url }}" class="card-link">Full text</a>
       <p class="card-text">
         <small class="text-muted">{{ post.date | date: site.dateformat }}</small>
       </p>
