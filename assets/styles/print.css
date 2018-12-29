@@ -35,6 +35,16 @@
         padding-right: 0;
     }
 
+    .article-post table {
+        display: table;
+        margin: auto;
+        width: initial;
+    }
+
+    .article-post .caption {
+        text-align: center;
+    }
+
     .article-post, .pageFooter {
         font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
         font-size: 12pt;
